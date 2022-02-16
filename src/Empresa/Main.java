@@ -19,10 +19,12 @@ class Empresa {
 
 	private Usuario usuario;
 	private Region region;
+	private Tipo tipo;
 
-	public Empresa(Usuario usuario, Region region) {
+	public Empresa(Usuario usuario, Region region, Tipo tipo) {
 		this.usuario = usuario;
 		this.region = region;
+		this.tipo = tipo;
 	}
 	
 	public Usuario getUsuario() {
@@ -31,9 +33,12 @@ class Empresa {
 	public Region getRegion() {
 		return region;
 	}
+	public Tipo getTipo() {
+		return tipo;
+	}
 	@Override
 	public String toString() {
-		return "Empresa ( " + getUsuario() + ", " + getRegion() + " )";
+		return "Empresa ( " + getUsuario() + ", " + getRegion() + ", " + getTipo() + " )";
 	}
 
 }
@@ -62,4 +67,18 @@ class Usuario {
 	}
 	
 }
-
+class Tipo{
+	private String tipo;
+	
+	public Tipo(String tipo) {
+		this.tipo = tipo;
+	}
+	public String getTipo(){
+		return tipo;
+	}
+	@Override
+	public String toString() {
+		return "Tipo [tipo=" + tipo + "]";
+	}
+	
+}
