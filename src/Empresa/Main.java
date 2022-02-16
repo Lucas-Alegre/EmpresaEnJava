@@ -6,8 +6,9 @@ public class Main {
 		
 		Usuario persona = new Usuario("Alegre", "Lucas");
 		Region localidad = new Region("Concordia, Entre ríos, Argentina");
-		Empresa empresa = new Empresa(persona, localidad);
-		
+		Tipo tipo = new Tipo("Multinacional");
+		Empresa empresa = new Empresa(persona, localidad, tipo);
+		//
 		System.out.println("-----------------Bienvenidos------------------");
 		System.out.println(empresa.toString());
 		System.out.println("-----------------Bienvenidos------------------");
